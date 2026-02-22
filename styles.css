@@ -40,7 +40,7 @@
 }
 html,
 body {
-  height: 100%;
+  height: 100;
 }
 body {
   margin: 0;
@@ -70,7 +70,9 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
-
+.p-bold {
+  font-weight: 500;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -125,7 +127,9 @@ img {
 header {
   position: sticky;
   top: 0;
+  padding: 0 10px;
   z-index: 50;
+  min-height: 30px;
 
   backdrop-filter: blur(14px);
   background: rgba(11, 15, 20, 0.66);
@@ -140,32 +144,9 @@ header {
   padding: 14px 0;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 780;
-  letter-spacing: 0.3px;
-}
-
 .logo {
-  width: 36px;
-  height: 36px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background:
-    radial-gradient(
-      14px 14px at 30% 30%,
-      rgba(96, 165, 250, 0.9),
-      transparent 60%
-    ),
-    radial-gradient(
-      20px 18px at 70% 65%,
-      rgba(37, 99, 235, 0.85),
-      transparent 62%
-    ),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
-  box-shadow: 0 18px 50px rgba(37, 99, 235, 0.22);
+  width: 25vw;
+  max-width: 500px;
 }
 
 nav {
@@ -245,7 +226,37 @@ nav a:hover {
 
 /* --------- hero ---------- */
 .hero {
-  padding: 82px 0 42px;
+  height: 60vh;
+  position: relative;
+  padding: 150px 0 42px;
+
+  /* HERO BG (use the WebP you generated) */
+  background-image: url('assets/hero-dark-mirror.webp');
+  background-size: cover;
+  background-position: right center; /* dom po prawej */
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+/* overlay dla czytelności tekstu */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 10, 18, 0.88) 0%,
+    rgba(5, 10, 18, 0.7) 45%,
+    rgba(5, 10, 18, 0.35) 100%
+  );
+  z-index: 0;
+}
+
+/* wszystko w hero nad overlay */
+.hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-grid {
@@ -253,147 +264,6 @@ nav a:hover {
   grid-template-columns: 1.15fr 0.85fr;
   gap: 28px;
   align-items: start;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
-
-  color: var(--muted);
-  font-size: 13px;
-  letter-spacing: 0.2px;
-}
-
-.badge::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--accent2);
-  box-shadow: 0 0 0 6px rgba(96, 165, 250, 0.12);
-}
-
-h1 {
-  margin: 14px 0 12px;
-  font-size: var(--h1);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-}
-
-.lead {
-  margin: 0 0 18px;
-  color: var(--muted);
-  font-size: var(--p);
-  max-width: 62ch;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 18px;
-}
-
-.tags {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 18px;
-}
-
-.tags span {
-  font-size: 12px;
-  color: var(--muted);
-  padding: 8px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  background: rgba(255, 255, 255, 0.02);
-}
-
-/* --------- hero card ---------- */
-.hero-card {
-  border-radius: var(--r28);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background:
-    radial-gradient(
-      700px 260px at 25% 0%,
-      rgba(37, 99, 235, 0.2),
-      transparent 55%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.06),
-      rgba(255, 255, 255, 0.02)
-    );
-  box-shadow: var(--shadow1);
-  overflow: hidden;
-  transform: translateY(0);
-  transition:
-    transform 0.22s var(--ease),
-    border-color 0.22s var(--ease);
-}
-
-.hero-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.14);
-}
-
-.card-top {
-  padding: 16px 18px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
-  color: var(--muted);
-  font-size: 13px;
-  background: rgba(0, 0, 0, 0.15);
-}
-
-.progress {
-  margin-top: 10px;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  overflow: hidden;
-}
-
-.progress div {
-  height: 100%;
-  width: 72%;
-  background: linear-gradient(
-    90deg,
-    rgba(96, 165, 250, 0.9),
-    rgba(37, 99, 235, 0.9)
-  );
-}
-
-.card-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  padding: 18px;
-}
-
-.card-content > div {
-  padding: 16px;
-  border-radius: var(--r20);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(11, 15, 20, 0.55);
-}
-
-.card-content h3 {
-  margin: 0 0 2px;
-  font-size: 26px;
-  letter-spacing: -0.02em;
-}
-
-.card-content p {
-  margin: 0;
-  font-size: 12px;
-  color: var(--muted);
 }
 
 /* --------- sections ---------- */
@@ -418,7 +288,7 @@ h2 {
 .cards {
   margin-top: 22px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 14px;
 }
 
@@ -452,11 +322,28 @@ h2 {
   font-size: 14px;
 }
 
+.card-no-frame {
+  padding: 30px;
+}
+.card-no-frame h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.card-no-frame p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.p-bold {
+  font-weight: bolder;
+}
+
 /* --------- process ---------- */
 .process {
   margin-top: 22px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 
@@ -534,6 +421,9 @@ footer {
 }
 
 @media (max-width: 520px) {
+  header .btn.primary {
+    display: none;
+  }
   .container {
     padding: 0 18px;
   }
