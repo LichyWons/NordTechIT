@@ -226,7 +226,6 @@ nav a:hover {
 
 /* --------- hero ---------- */
 .hero {
-  height: 60vh;
   position: relative;
   padding: 150px 0 42px;
 
@@ -435,6 +434,7 @@ footer {
   }
   .hero-buttons .btn {
     width: 100%;
+    margin: 5px;
   }
 }
 
