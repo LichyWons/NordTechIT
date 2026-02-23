@@ -147,6 +147,8 @@ header {
 .logo {
   width: 25vw;
   max-width: 500px;
+  min-width: 200px;
+  margin: 10px;
 }
 
 nav {
