@@ -6,24 +6,51 @@
     <title>NordTech — Nettsider fra nord</title>
     <meta
       name="description"
-      content="Premium frontend-utvikling: raske, moderne og SEO-optimaliserte nettsider."
+      content="Professionelle nettsider for små og mellomstore bedrifter i Norge."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bg-glow"></div>
-    <header>
+    <header class="site-header">
       <div class="container nav">
-        <div class="logo">
-          <img src="assets/NordTechLogo.png" alt="NordTech_logo" />
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <img src="assets/nordtech-logo.png" alt="NordTech logo" />
         </div>
-
-        <nav>
-          <a href="#">Pakke priser</a>
-          <a href="#">Prosjekter</a>
-          <a href="#">Kontakt</a>
+        <nav class="nav-links" aria-label="Hovedmeny">
+          <a href="tjenester.html">Tjenester</a>
+          <a href="pakke.html">Pris</a>
+          <a href="om.html">Om meg</a>
+          <a href="kontakt.html">Kontakt</a>
         </nav>
-        <a href="#" class="btn primary">Kontakt</a>
+        <a href="#kontakt" class="btn primary desktop-cta">Få tilbud</a>
+        <button
+          class="menu-btn"
+          type="button"
+          aria-label="Åpne meny"
+          aria-controls="menu-overlay"
+          aria-expanded="false"
+        >
+          <span class="menu-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+      </div>
+      <!-- OVERLAY -->
+      <div class="menu-overlay" id="menu-overlay" aria-hidden="true">
+        <div
+          class="menu-panel"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Meny"
+        >
+          <nav class="menu-links" aria-label="Mobilmeny">
+            <a href="tjenester.html">Tjenester</a>
+            <a href="pakke.html">Pris</a>
+            <a href="om.html">Om meg</a>
+            <a href="kontakt.html">Kontakt</a>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -31,8 +58,8 @@
       <div class="container hero-grid">
         <div>
           <h1>
-            Nettsider fra Nord Norge.<br />Profesjonelle løsninger for små og
-            mellomstore bedrifter.
+            Nettsider fra Nord.<br />
+            Profesjonelle løsninger for små og mellomstore bedrifter.
           </h1>
           <p class="lead">
             Jeg lager moderne nettsider for små bedrifter i Norge – med klart
@@ -97,6 +124,7 @@
       <div class="container">
         <h2>Derfor velger bedrifter NordTech</h2>
         <div class="cards">
+          <!-- Card 1 -->
           <div class="card-no-frame">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -121,6 +149,7 @@
             <h3>Personlig samarbeid</h3>
             <p>Du har direkte kontakt med meg gjennom hele prosessen.</p>
           </div>
+          <!-- Card 2 -->
           <div class="card-no-frame">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +173,6 @@
                 d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"
               />
             </svg>
-
             <h3>Alt fra A til Å</h3>
             <p>
               Jeg håndterer hele prosessen: strategi, design, utvikling,
@@ -152,7 +180,7 @@
               tydelig leveranse.
             </p>
           </div>
-
+          <!-- Card 3 -->
           <div class="card-no-frame">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -175,13 +203,13 @@
               <path d="m2.3 2.3 7.286 7.286" />
               <circle cx="11" cy="11" r="2" />
             </svg>
-
             <h3>Skreddersydd design – uten ferdige maler</h3>
             <p>
               Nettsiden utvikles spesielt for din bedrift, ikke basert på en
               standardmal.
             </p>
           </div>
+          <!-- Card 4 -->
           <div class="card-no-frame">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -200,7 +228,6 @@
               />
               <path d="m9 12 2 2 4-4" />
             </svg>
-
             <h3>Fast pris og tydelig struktur</h3>
             <p>
               Du vet hva som leveres, hva det koster og når nettsiden er klar.
@@ -209,6 +236,7 @@
         </div>
       </div>
     </section>
+
     <section class="section dark" id="prosess">
       <div class="container">
         <div class="section-head">
@@ -218,7 +246,6 @@
             når.
           </p>
         </div>
-
         <div class="process">
           <div>
             <span>01</span>
@@ -228,7 +255,6 @@
               oppnå.
             </p>
           </div>
-
           <div>
             <span>02</span>
             <h4>Design</h4>
@@ -237,7 +263,6 @@
               budskapet tydelig.
             </p>
           </div>
-
           <div>
             <span>03</span>
             <h4>Nettsiden utvikles</h4>
@@ -246,7 +271,6 @@
               desktop.
             </p>
           </div>
-
           <div>
             <span>04</span>
             <h4>Du ser over</h4>
@@ -255,7 +279,6 @@
               lansering.
             </p>
           </div>
-
           <div>
             <span>05</span>
             <h4>Endringer</h4>
@@ -264,7 +287,6 @@
               tilbakemeldingene dine.
             </p>
           </div>
-
           <div>
             <span>06</span>
             <h4>Publiseres</h4>
@@ -276,6 +298,7 @@
         </div>
       </div>
     </section>
+
     <section class="section cta-final">
       <div class="container">
         <div class="cta-box">
@@ -284,7 +307,6 @@
             Fortell kort hva du trenger. Jeg svarer raskt med forslag, pris og
             neste steg. Ingen forpliktelser.
           </p>
-
           <div class="cta-actions">
             <a href="#kontakt" class="btn primary"
               >Få et uforpliktende tilbud</a
@@ -294,10 +316,12 @@
         </div>
       </div>
     </section>
+
     <footer>
       <div class="container">
-        <p>© 2026 NordTech — Premium digitale løsninger fra nord.</p>
+        <p>© 2026 NORDtech — Premium digitale løsninger fra nord.</p>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
