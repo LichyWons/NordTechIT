@@ -64,3 +64,25 @@
     if (window.innerWidth > 960) closeMenu();
   });
 })();
+
+// Contact form submission handling
+const form = document.getElementById('contactForm');
+const successScreen = document.getElementById('successScreen');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch('/', {
+    method: 'POST',
+    body: formData,
+  })
+    .then(() => {
+      form.reset();
+      successScreen.classList.add('active');
+    })
+    .catch(() => {
+      alert('Noe gikk galt. Prøv igjen.');
+    });
+});

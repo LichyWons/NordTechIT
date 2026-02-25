@@ -3,27 +3,51 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NordTech — Nettsider fra nord</title>
+    <title>Kontakt | NordTech</title>
     <meta
       name="description"
-      content="Professionelle nettsider for små og mellomstore bedrifter i Norge."
+      content="Ta kontakt med NordTech for et uforpliktende tilbud."
     />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
   </head>
+
   <body>
     <header class="site-header">
       <div class="container nav">
         <div class="brand">
           <div class="logo" aria-hidden="true"></div>
-          <a href="index.html"><img src="assets/nordtech-logo.png" alt="NordTech logo" /></a>
+          <a href="index.html">
+            <img src="assets/nordtech-logo.png" alt="NordTech logo" />
+          </a>
         </div>
+
         <nav class="nav-links" aria-label="Hovedmeny">
-          <a href="tjenester.html">Tjenester</a>
+          <a href="tjenester.html">Pakker og Priser</a>
           <a href="pakke.html">Pris</a>
           <a href="om.html">Om meg</a>
-          <a href="kontakt.html">Kontakt</a>
+          <a href="kontakt.html" aria-current="page">Kontakt</a>
         </nav>
+
         <a href="kontakt.html" class="btn primary desktop-cta">Få tilbud</a>
+
         <button
           class="menu-btn"
           type="button"
@@ -36,6 +60,7 @@
           </span>
         </button>
       </div>
+
       <!-- OVERLAY -->
       <div class="menu-overlay" id="menu-overlay" aria-hidden="true">
         <div
@@ -48,17 +73,245 @@
             <a href="tjenester.html">Tjenester</a>
             <a href="pakke.html">Pris</a>
             <a href="om.html">Om meg</a>
-            <a href="kontakt.html">Kontakt</a>
+            <a href="kontakt.html" aria-current="page">Kontakt</a>
           </nav>
         </div>
       </div>
     </header>
 
+    <main>
+      <!-- HERO (small / calm) -->
+      <section class="hero hero--small">
+        <div class="container hero-grid">
+          <div>
+            <h1>Kontakt</h1>
+            <p class="lead">
+              Fortell kort hva du trenger. Jeg svarer med forslag og neste steg
+              – tydelig og uten press.
+            </p>
+            <div class="hero-buttons">
+              <a href="#kontakt-skjema" class="btn primary">Send melding</a>
+              <a href="tjenester.html" class="btn secondary">Se pakker</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SPLIT -->
+      <section class="section" id="kontakt-skjema">
+        <div class="container">
+          <div class="section-head">
+            <h2>Send en henvendelse</h2>
+            <p class="sub">
+              Du får svar så raskt som mulig. Din informasjon brukes kun til å
+              besvare henvendelsen.
+            </p>
+          </div>
+
+          <div class="contact-split">
+            <!-- LEFT: FORM CARD -->
+            <div class="contact-card">
+              <form
+                name="kontakt"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                class="contact-form"
+                id="contactForm"
+              >
+                <input type="hidden" name="form-name" value="kontakt" />
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="Ny melding fra NordTech"
+                />
+
+                <p class="hidden">
+                  <label>Ikke fyll ut: <input name="bot-field" /></label>
+                </p>
+
+                <div class="form-group">
+                  <label for="name">Navn</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">E-post</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Melding</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn primary">Send melding</button>
+
+                <p class="form-note">
+                  Ved å sende inn skjemaet godtar du at jeg kan kontakte deg på
+                  e-post for å følge opp.
+                </p>
+              </form>
+
+              <!-- SUCCESS OVERLAY (only over the card) -->
+              <div
+                class="success-screen"
+                id="successScreen"
+                aria-live="polite"
+                aria-atomic="true"
+              >
+                <div class="success-box">
+                  <div class="success-icon" aria-hidden="true">✓</div>
+                  <h3>Takk for meldingen</h3>
+                  <p>
+                    Jeg har mottatt henvendelsen din og svarer deg så raskt som
+                    mulig.
+                  </p>
+                  <a class="btn secondary" href="index.html"
+                    >Tilbake til forsiden</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: TRUST + COMPANY INFO -->
+            <aside class="contact-aside" aria-label="Firmainformasjon">
+              <div class="info-card">
+                <h3>Kort om NordTech</h3>
+                <ul class="info-list">
+                  <li>
+                    <strong>Lokasjon:</strong> Bogen i Ofoten, Evenes, Norge
+                  </li>
+
+                  <li>
+                    <strong>Arbeidsstil:</strong> Tydelig prosess, klare rammer
+                  </li>
+                  <li>
+                    <strong>Fokus:</strong> Nettsider, struktur og grunnleggende
+                    SEO
+                  </li>
+                </ul>
+              </div>
+
+              <div class="info-card">
+                <h3>Firmainformasjon</h3>
+                <div class="info-lines">
+                  <p><strong>NordTech</strong></p>
+                  <p>Krzysztof Bytniewski</p>
+
+                  <!-- PODMIEN: org.nr + ewentualnie adresse/telefon -->
+                  <p>Org.nr: <span class="muted">[sett inn org.nr]</span></p>
+                  <p>
+                    E-post:
+                    <a href="mailto:kontakt@nordtech.as">kontakt@nordtech.as</a>
+                  </p>
+                  <p>Sted: Bogen i Ofoten, Evenes, Norge</p>
+
+                  <p class="info-link">
+                    <a
+                      href="https://w2.brreg.no/enhet/sok/"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      Søk i Brønnøysundregistrene
+                    </a>
+                  </p>
+                </div>
+
+                <p class="legal-note">
+                  Personvern: Informasjon behandles konfidensielt og brukes kun
+                  for å svare på henvendelsen.
+                </p>
+              </div>
+
+              <div class="info-card info-card--soft">
+                <h3>Hva skjer etter at du tar kontakt?</h3>
+                <div class="mini-steps">
+                  <div>
+                    <span>01</span>
+                    <p>
+                      Jeg leser meldingen og stiller 2–3 korte
+                      oppfølgingsspørsmål.
+                    </p>
+                  </div>
+                  <div>
+                    <span>02</span>
+                    <p>
+                      Du får forslag til løsning + prisramme (tydelig og
+                      konkret).
+                    </p>
+                  </div>
+                  <div>
+                    <span>03</span>
+                    <p>Hvis det passer, avtaler vi neste steg – uten press.</p>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="section cta-final">
+        <div class="container">
+          <div class="cta-box">
+            <h2>Klar for en nettside som faktisk gir deg kunder?</h2>
+            <p>
+              Send en kort melding. Jeg svarer med forslag, pris og neste steg.
+              Ingen forpliktelser.
+            </p>
+            <div class="cta-actions">
+              <a href="#kontakt-skjema" class="btn primary">Send melding</a>
+              <a href="tjenester.html" class="btn secondary">Se pakker</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="container">
         <p>© 2026 NORDtech — Premium digitale løsninger fra nord.</p>
       </div>
     </footer>
+
     <script src="main.js"></script>
-  </body
+    <script>
+      const form = document.getElementById('contactForm');
+      const successScreen = document.getElementById('successScreen');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch('/', { method: 'POST', body: formData })
+          .then(() => {
+            form.reset();
+            successScreen.classList.add('active');
+          })
+          .catch(() => {
+            alert('Noe gikk galt. Prøv igjen.');
+          });
+      });
+    </script>
+  </body>
+</html>
