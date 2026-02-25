@@ -1072,3 +1072,81 @@ body.menu-lock {
     transition: none !important;
   }
 }
+/* ========== OM MEG (PAGE) ========== */
+.hero.hero--small {
+  padding: 96px 0 34px;
+  background-image: none; /* bez zdjęcia w tle, spójnie i spokojnie */
+}
+
+.hero.hero--small::before {
+  background: linear-gradient(
+    90deg,
+    rgba(5, 10, 18, 0.92) 0%,
+    rgba(5, 10, 18, 0.75) 55%,
+    rgba(5, 10, 18, 0.55) 100%
+  );
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.about-photo {
+  border-radius: var(--r28);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: var(--shadow2);
+  overflow: hidden;
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-copy h2 {
+  margin: 0 0 12px;
+}
+
+.about-lead {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.about-muted {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.about-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.about-note {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.about-cards .card p {
+  margin-top: 6px;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .hero.hero--small {
+    padding: 64px 0 28px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
