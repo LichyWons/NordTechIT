@@ -1,6 +1,6 @@
 export const CookieConsent = (() => {
   const STORAGE_KEY = 'nordtech_cookie_consent';
-  const GA_ID = 'G-XXXXXXXXXX';
+  const GA_ID = 'G-CPDGM98L2Q';
 
   function getConsent() {
     return localStorage.getItem(STORAGE_KEY);
