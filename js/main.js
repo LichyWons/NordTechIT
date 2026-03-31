@@ -1,3 +1,8 @@
+import { CookieConsent } from './cookies.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  CookieConsent.init();
+});
 (function () {
   // Elements
   const header = document.querySelector('.site-header');
