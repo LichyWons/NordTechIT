@@ -109,27 +109,28 @@ export const CookieConsent = (() => {
 
   function loadGoogleAnalytics() {
     if (!GA_ID || GA_ID === 'G-XXXXXXXXXX') {
-      console.warn(
-        'CookieConsent: Uzupełnij poprawne GA_ID w pliku cookie-consent.js',
-      );
+      console.warn('CookieConsent: missing valid GA_ID');
       return;
     }
 
     if (window.__gaLoaded) return;
     window.__gaLoaded = true;
 
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-    document.head.appendChild(script);
-
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () {
       window.dataLayer.push(arguments);
     };
 
-    window.gtag('js', new Date());
-    window.gtag('config', GA_ID);
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+
+    script.onload = () => {
+      window.gtag('js', new Date());
+      window.gtag('config', GA_ID);
+    };
+
+    document.head.appendChild(script);
   }
 
   function removeBanner() {
@@ -165,8 +166,10 @@ export const CookieConsent = (() => {
     document.body.appendChild(banner);
 
     banner.addEventListener('click', (event) => {
-      const action = event.target.getAttribute('data-cookie-action');
-      if (!action) return;
+      const button = event.target.closest('[data-cookie-action]');
+      if (!button) return;
+
+      const action = button.dataset.cookieAction;
 
       if (action === 'accept') {
         setConsent('accepted');
