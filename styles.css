@@ -1,5 +1,5 @@
 :root {
-  /* Deep Arctic Minimal — premium */
+  /* Deep Arctic — dark */
   --bg: #0b0f14;
   --bg2: #070a0f;
   --surface: rgba(255, 255, 255, 0.03);
@@ -25,6 +25,23 @@
 
   --max: 1140px;
 
+  /* Deep Arctic — light */
+  body.dark-mode {
+    --bg: #f3f4f6;
+    --bg2: #e5e7eb;
+    --surface: rgba(0, 0, 0, 0.03);
+    --surface2: rgba(0, 0, 0, 0.045);
+    --card: rgba(0, 0, 0, 0.035);
+    --border: rgba(0, 0, 0, 0.09);
+    --border2: rgba(0, 0, 0, 0.14);
+
+    --text: #11181c;
+    --muted: #4b5563;
+    --muted2: #374151;
+
+    --accent: #2563eb;
+    --accent2: #60a5fa;
+  }
   /* Typography scale */
   --h1: clamp(36px, 4.6vw, 58px);
   --h2: clamp(22px, 2.2vw, 28px);
@@ -747,6 +764,9 @@ footer {
   transform: translateX(14px);
   transition: transform 0.26s var(--ease);
   padding: 18px;
+}
+.menu-panel.dark-mode {
+  background: #f3f4f6;
 }
 
 .menu-links {
