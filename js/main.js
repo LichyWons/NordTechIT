@@ -1,7 +1,4 @@
 import { CookieConsent } from './cookies.js';
-import { toggleTheme } from './toggleMode.js';
-
-toggleTheme();
 
 document.addEventListener('DOMContentLoaded', () => {
   CookieConsent.init();
