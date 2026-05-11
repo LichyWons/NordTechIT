@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio | NordTech</title>
+    <meta
+      name="description"
+      content="Se utvalgte nettsideprosjekter fra NordTech. Sample-prosjekter, live nettsider, GitHub-repositorier og korte beskrivelser."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <a href="index.html">
+            <img src="assets/nordtech-logo.png" alt="NordTech logo" />
+          </a>
+        </div>
+
+        <nav class="nav-links" aria-label="Hovedmeny">
+          <a href="tjenester.html">Tilbud</a>
+          <a href="portfolio.html" aria-current="page">Portfolio</a>
+          <a href="om.html">Om meg</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+
+        <a href="kontakt.html" class="btn primary desktop-cta">Få tilbud</a>
+
+        <button
+          class="menu-btn"
+          type="button"
+          aria-label="Åpne meny"
+          aria-controls="menu-overlay"
+          aria-expanded="false"
+        >
+          <span class="menu-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="menu-overlay" id="menu-overlay" aria-hidden="true">
+        <div
+          class="menu-panel"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Meny"
+        >
+          <nav class="menu-links" aria-label="Mobilmeny">
+            <a href="tjenester.html">Tilbud</a>
+            <a href="portfolio.html" aria-current="page">Portfolio</a>
+            <a href="om.html">Om meg</a>
+            <a href="kontakt.html">Kontakt</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero--small portfolio-hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Portfolio</h1>
+          <p class="lead">
+            Et utvalg nettsideprosjekter og sample-sider med fokus på tydelig
+            struktur, moderne design, responsivitet og profesjonell
+            presentasjon.
+          </p>
+          <div class="hero-buttons">
+            <a href="kontakt.html" class="btn primary">Start et prosjekt</a>
+            <a href="tjenester.html" class="btn secondary">Se pakker</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Utvalgte prosjekter</h2>
+          <p class="sub">
+            Her viser jeg prosjekter som demonstrerer hvordan en liten bedrift
+            kan presenteres tydelig og profesjonelt på nett.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="project-card">
+            <div class="project-visual">
+              <img
+                src="assets/evenesbyggscreen.webp"
+                alt="Screenshot av Evenes Bygg nettside"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <div class="project-top">
+                <span class="project-badge">Sample project</span>
+                <span class="project-type">Nettside</span>
+              </div>
+
+              <h3>Evenes Bygg</h3>
+
+              <p>
+                Sample nettside for en lokal byggbedrift i Evenes. Prosjektet
+                viser en ryddig struktur, tydelig presentasjon av tjenester og
+                enkel vei til kontakt.
+              </p>
+
+              <ul class="project-tech">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Tailwind</li>
+                <li>JavaScript</li>
+                <li>SEO</li>
+              </ul>
+
+              <div class="project-actions">
+                <a
+                  href="https://evenesbygg.netlify.app/"
+                  class="btn primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Se live
+                </a>
+                <a
+                  href="https://github.com/LichyWons/EvenesByggv2"
+                  class="btn secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual">
+              <img
+                src="assets/tmnordscreen.webp"
+                alt="Screenshot av TMNordBygg nettside"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <div class="project-top">
+                <span class="project-badge">Sample project</span>
+                <span class="project-type">Nettside</span>
+              </div>
+
+              <h3>TMNordBygg</h3>
+
+              <p>
+                Sample nettside laget for en mulig kunde innen byggbransjen.
+                Fokus på enkel navigasjon, profesjonelt uttrykk og tydelig
+                kontaktpunkt.
+              </p>
+
+              <ul class="project-tech">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>SEO</li>
+              </ul>
+
+              <div class="project-actions">
+                <a
+                  href="https://tmnordbygg.netlify.app/"
+                  class="btn primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Se live
+                </a>
+                <a
+                  href="https://github.com/LichyWons/TMNordBygg"
+                  class="btn secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--empty">
+            <div class="project-visual">
+              <img
+                src="assets/workinprogress.webp"
+                alt="Illustrasjon av webdesign og UI-prosess"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <div class="project-top">
+                <span class="project-badge">Kommer snart</span>
+                <span class="project-type">Case</span>
+              </div>
+
+              <h3>Neste prosjekt kommer snart</h3>
+
+              <p>
+                Her kommer neste prosjekt. Fokus på moderne nettsider, tydelig
+                struktur, brukervennlighet og profesjonelt UI-design for
+                bedrifter i Norge.
+              </p>
+
+              <ul class="project-tech">
+                <li>UI Design</li>
+                <li>Frontend</li>
+                <li>Responsive</li>
+              </ul>
+
+              <div class="project-actions">
+                <a href="kontakt.html" class="btn secondary"
+                  >Start ditt prosjekt</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-final">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Vil du ha en lignende nettside for din bedrift?</h2>
+          <p>
+            Send en kort melding om hva du trenger. Jeg svarer med forslag, pris
+            og neste steg.
+          </p>
+          <div class="cta-actions">
+            <a href="kontakt.html" class="btn primary">Få et tilbud</a>
+            <a href="tjenester.html" class="btn secondary">Se pakker</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 NORDtech — Digitale premium løsninger fra nord.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
