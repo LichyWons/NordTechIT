@@ -1082,11 +1082,12 @@ footer p {
 /* SUCCESS SCREEN */
 .success-screen {
   position: absolute;
+  margin-top: 600px;
   inset: 0;
   display: grid;
   place-items: center;
   border-radius: var(--r21);
-  background: rgba(255, 255, 255, 0.96);
+  background: lightgray;
   backdrop-filter: blur(13px);
   opacity: 0;
   pointer-events: none;
